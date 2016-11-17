@@ -142,7 +142,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //gap to keep score
         let gap = SKNode()
-        gap.position = CGPoint(x: self.frame.midX + self.frame.width, y: self.frame.midY + pipeOffset)
+        gap.position = CGPoint(x: self.frame.midX + self.frame.width + pipeTop.frame.width, y: self.frame.midY + pipeOffset)
         gap.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: pipeBottom.size.width, height: gapHeight))
         gap.physicsBody!.isDynamic = false
         gap.run(movePipes)
